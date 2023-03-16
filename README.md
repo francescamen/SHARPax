@@ -48,7 +48,7 @@ The complete description of the dataset can be found in the reference paper and 
 The code for SHARPax is implemented in Python and can be found in the ```Python_code``` folder inside this repository. The scripts to perform the processing are described in the following, together with the specific parameters.
 
 ### Phase sanitization
-The following three scripts encode the phase sanitization algorithm detailed in Section 3.1 of [meneghello2022sharp](https://ieeexplore.ieee.org/document/9804861)].
+The following three scripts encode the phase sanitization algorithm detailed in Section 3.1 of [[meneghello2022sharp](https://ieeexplore.ieee.org/document/9804861)].
 ```bash
 python CSI_phase_sanitization_signal_preprocessing.py <'directory of the input data'> <'process all the files in subdirectories (1) or not (0)'> <'name of the file to process (only if 0 in the previous field)'> <'number of spatial streams'> <'number of cores'> <'number of OFDMA sub-channels including control sub-channels'> <'index where to start the processing for each stream'> 
 ```
@@ -65,7 +65,7 @@ python CSI_phase_sanitization_signal_reconstruction.py <'directory of the proces
 e.g., python CSI_phase_sanitization_signal_reconstruction.py ./phase_processing/ ./processed_phase/ 1 4 1024 0 -1
 
 ### Doppler computation
-The following script computes the Doppler spectrum as described in Section 3.2 of [meneghello2022sharp](https://ieeexplore.ieee.org/document/9804861)].
+The following script computes the Doppler spectrum as described in Section 3.2 of [[meneghello2022sharp](https://ieeexplore.ieee.org/document/9804861)].
 
 ```bash
 python CSI_doppler_computation.py <'directory of the reconstructed data'> <'sub-directories of data'> <'directory to save the Doppler data'> <'starting index to process data'> <'end index to process data (samples from the end)'> <'number of packets in a sample'> <'number of packets for sliding operations'> <'noise level'> <--bandwidth 'bandwidth'> <--sub_band 'sub band to consider (in {1, 2} for 40 MHz, in {1, 2, 3, 4} for 20 MHz)'> <-- sub_sampling 'sub sampling factor in {1, ..., 6}'>
