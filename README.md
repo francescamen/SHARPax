@@ -36,7 +36,7 @@ cd <your_path>
 git clone https://github.com/francescamen/SHARPax
 ```
 
-Download the input data from [here](https://drive.google.com/file/d/1JbWNV3fMAF-26SJfqX0EohkkrUe2SeC4/view?usp=sharing) and unzip the file. 
+Download the input data from [here](https://ieee-dataport.org/documents/ieee-80211ax-csi-dataset-human-activity-recognition) and unzip the file. 
 For your convenience, you can use the ```input_files/processed_files/``` folder inside this project to place the files but the scripts work whatever is the source folder.
 
 The dataset contains Wi-Fi channel frequency response (CFR) data collected in an IEEE 802.11ax network through [AX CSI](https://ans.unibs.it/projects/ax-csi/). 
