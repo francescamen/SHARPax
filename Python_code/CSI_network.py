@@ -211,26 +211,26 @@ if __name__ == '__main__':
     csi_model = tf.keras.models.load_model(name_model)
 
     # TRAIN
-    # train_labels_true = np.array(labels_train_selected_expanded)
-    #
-    # name_cache_train_test = './cache_files/' + name_base + '_cache_train_test'
-    # dataset_csi_train_test = create_dataset_single(file_train_selected_expanded, labels_train_selected_expanded,
-    #                                                stream_ant_train, input_network, batch_size,
-    #                                                shuffle=False, cache_file=name_cache_train_test, prefetch=False)
-    # train_prediction_list = csi_model.predict(dataset_csi_train_test,
-    #                                           steps=train_steps_per_epoch)[:train_labels_true.shape[0]]
-    #
-    # train_labels_pred = np.argmax(train_prediction_list, axis=1)
-    #
-    # conf_matrix_train = confusion_matrix(train_labels_true, train_labels_pred)
+    train_labels_true = np.array(labels_train_selected_expanded)
+
+    name_cache_train_test = './cache_files/' + name_base + '_cache_train_test'
+    dataset_csi_train_test = create_dataset_single(file_train_selected_expanded, labels_train_selected_expanded,
+                                                   stream_ant_train, input_network, batch_size,
+                                                   shuffle=False, cache_file=name_cache_train_test, prefetch=False)
+    train_prediction_list = csi_model.predict(dataset_csi_train_test,
+                                              steps=train_steps_per_epoch)[:train_labels_true.shape[0]]
+
+    train_labels_pred = np.argmax(train_prediction_list, axis=1)
+
+    conf_matrix_train = confusion_matrix(train_labels_true, train_labels_pred)
 
     # VAL
-    # val_labels_true = np.array(labels_val_selected_expanded)
-    # val_prediction_list = csi_model.predict(dataset_csi_val, steps=val_steps_per_epoch)[:val_labels_true.shape[0]]
-    #
-    # val_labels_pred = np.argmax(val_prediction_list, axis=1)
-    #
-    # conf_matrix_val = confusion_matrix(val_labels_true, val_labels_pred)
+    val_labels_true = np.array(labels_val_selected_expanded)
+    val_prediction_list = csi_model.predict(dataset_csi_val, steps=val_steps_per_epoch)[:val_labels_true.shape[0]]
+
+    val_labels_pred = np.argmax(val_prediction_list, axis=1)
+
+    conf_matrix_val = confusion_matrix(val_labels_true, val_labels_pred)
 
     # TEST
     print('TEST')
