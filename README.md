@@ -2,7 +2,7 @@
 
 Algorithms for human activity recognition with a commercial IEEE 802.11ax router @ 5 GHz, 80 MHz of bandwidth.
 
-This repository contains the reference code for the article [''Toward Integrated Sensing and Communications in IEEE 802.11bf Wi-Fi Networks''](https://arxiv.org/abs/2212.13930). The algorithms are an adaptation to the case of 802.11ax devices of the original [''SHARP algorithm''](https://ieeexplore.ieee.org/document/9804861).
+This repository contains the reference code for the article [''Toward Integrated Sensing and Communications in IEEE 802.11bf Wi-Fi Networks''](https://ieeexplore.ieee.org/document/10192291). The algorithms are an adaptation to the case of 802.11ax devices of the original [''SHARP algorithm''](https://ieeexplore.ieee.org/document/9804861).
 
 If you find the project useful and you use this code, please cite our articles:
 ```
@@ -11,9 +11,9 @@ If you find the project useful and you use this code, please cite our articles:
   journal={IEEE Communications Magazine}, 
   title = {{Toward Integrated Sensing and Communications in IEEE 802.11bf Wi-Fi Networks}},
   year = {2023},
-  volume={},
-  number={},
-  pages={}
+  volume={61},
+  number={7},
+  pages={128-133}
   }
 ```
 
